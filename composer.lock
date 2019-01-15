@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f9a3e8f2e39e13048e4151c4b0f36a9c",
+    "packages": [
+        {
+            "name": "vevtik/exchanger-apis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vevtik/exchanger-apis.git",
+                "reference": "858f204a2e114c7936a570aba42f9f9e5ecd1396"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vevtik/exchanger-apis/zipball/858f204a2e114c7936a570aba42f9f9e5ecd1396",
+                "reference": "858f204a2e114c7936a570aba42f9f9e5ecd1396",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exchanger\\Api\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Vladimir Dimitrischuck",
+                    "email": "vevtik@gmail.com"
+                }
+            ],
+            "description": "Exchange rate apis",
+            "support": {
+                "source": "https://github.com/vevtik/exchanger-apis/tree/master",
+                "issues": "https://github.com/vevtik/exchanger-apis/issues"
+            },
+            "time": "2019-01-15T14:30:38+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "vevtik/exchanger-apis": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

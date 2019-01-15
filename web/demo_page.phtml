@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Usd-converter</title>
+    <script type="text/javascript" src="/js/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+<h1>Usd-converter demo page</h1>
+<form>
+    <table>
+        <tr>
+            <th><label for="target-currency">Select tareget currency</label></th>
+            <td>
+                <select id="target-currency" name="target-currency">
+                    <?php
+                    foreach ($supportedCurrencies as $currency) {
+                        echo sprintf('<option value="%1$s">%1$s</option>', $currency);
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="amount">Amount</label></th>
+            <td><input type="text" id="amount" name="amount"></td>
+        </tr>
+        <tr>
+            <th><label for="rate">Rate</label></th>
+            <td><input type="text" id="rate" name="rate" disabled></td>
+        </tr>
+        <tr>
+            <th><label for="result">Result</label></th>
+            <td id="result"></td>
+
+        </tr>
+    </table>
+</form>
+</body>
+</html>

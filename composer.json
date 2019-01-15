@@ -1,0 +1,27 @@
+{
+  "name": "vevtik/usd-converter",
+  "description": "Convert USD to other currencies",
+  "license": "proprietary",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Vladimir Dimitrischuck",
+      "email": "vevtik@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:vevtik/exchanger-apis.git"
+    }
+  ],
+  "require": {
+    "vevtik/exchanger-apis": "dev-master"
+  },
+  "minimum-stability": "dev"
+}
