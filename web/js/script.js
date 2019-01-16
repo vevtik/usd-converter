@@ -15,14 +15,15 @@ jQuery(document).ready(function($){
 
 	function getRate() {
 
-		$.post( '/', {'target': target}, function(data) {
+		$.post( '', {'target': target}, function(data) {
 				if (data.success) {
 					rate = roundNumber(data.rate, 6);
-					$('#rate').val(rate);
 					calculate();
 				} else {
 					console.log(data);
+					rate = 0;
 				}
+				$('#rate').val(rate);
 			},
 			'json'
 		);
@@ -38,8 +39,6 @@ jQuery(document).ready(function($){
 	}
 
 	function roundNumber(number, decimal) {
-		console.log(Math.pow(10, decimal));
-		console.log(Math.pow(10, decimal));
 		return Math.round(number * Math.pow(10, decimal)) / Math.pow(10, decimal);
 	}
 });

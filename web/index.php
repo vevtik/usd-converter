@@ -10,7 +10,7 @@ $binanceCurrencies = ["BTC", "BCH"];
 /**
  * @author  Vladimir Dimitrischuck <vevtik@gmail.com>
  */
-if (! empty($_POST)) {
+if (! empty($_POST) && ! empty($_POST['target'])) {
     require_once __DIR__ . '/../vendor/autoload.php';
 
     //Конфигурация
@@ -40,11 +40,15 @@ if (! empty($_POST)) {
     );
     //Конец конфигурации
 
-
-    $rate = $manager->getExchangeRate('USD', $_POST['target']);
-
-    $result = json_encode(['rate'=> $rate, 'success'=> true]);
     header("Content-Type: text/json");
+    try {
+        $rate = $manager->getExchangeRate('USD', $_POST['target']);
+        $result = json_encode(['rate'=> $rate, 'success'=> true]);
+    } catch (\Exception $e) {
+        $result = json_encode(['message'=> $e->getMessage(), 'success'=> false]);
+
+    }
+
     exit($result);
 }
 $supportedCurrencies = array_merge($euroCurrencies, $binanceCurrencies);
